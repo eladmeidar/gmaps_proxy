@@ -1,6 +1,32 @@
 = gmaps_proxy
 
-Description goes here.
+Gmaps proxy allows you to easily add an embedded iframe with a GoogleMap image, when it is not possible to use
+the native embedded map or API due to local area restrictions. (like in Israel when the map rights belong to a private company so Google cannot use it).
+
+== Installation
+
++gem install gmaps_proxy+ from gemcutter.
+
+
+== Usage
+
+simply call a new class with an address you want to focus on:
+
++map = GmapsProxy.new("Fort Lauderdale")+
+
+and
+
++ map.pull +
+
+and it will return a full HTML page with the map, generally i think the best usage is to point
+an iFrame in your app to an action that simply returns that HTML.
+
+
+== It does not allow you to
+
+* zoom
+* move around
+* do anything but look :)
 
 == Note on Patches/Pull Requests
  
