@@ -1,15 +1,17 @@
 require 'rubygems'
 require 'rake'
 
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "gmaps_proxy"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Enable GoogleMaps access simple access to countries that can't use the API (israel for example)}
+    gem.description = %Q{Due to some rights issues, some countries does not appear with full information on Google Maps API, this library offers a simple hack to make it easier to implement a simple map fragment in your application}
     gem.email = "elad@eizesus.com"
     gem.homepage = "http://github.com/eladmeidar/gmaps_proxy"
-    gem.authors = ["Elad Meidar"]
+    gem.authors = ["Elad Meidar", "Ziv Perry"]
+    gem.add_dependency 'nokogiri', ">=0"
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
